@@ -1,0 +1,26 @@
+<section class="readinglist" ng-controller="ReadingController">
+	
+	<div class="top-bar">
+		<div class="reading-title">Reading List
+		</div>
+		<div class="add-button">
+			<a class="btn-sm btn-border" ng-click="">Add New</a>
+		</div>
+	</div>
+
+	<div class="reading-books" ng-click="showBook(book.name)" ng-repeat ="book in readinglist">
+		<div class="thumbnail-column">
+			<img ng-src="book.thumbnail" class="thumbnail"></div>
+		<div class="title-column">
+			<div class="name">{{book.name}}</div>
+			<div class="author">{{book.author}}</div>
+		</div>
+		<div class="pages-column">
+			<div>{{book.pages}</div>
+		</div>
+		<div class="options-column">
+			<div><a ng-click="">Finished</a> | <a ng-click="">Remove</a></div>
+		</div>
+	</div>
+
+</section>

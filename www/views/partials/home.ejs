@@ -1,0 +1,41 @@
+<section class="home" ng-controller="HomeController">
+	
+	<div class="top-bar">
+		<div class="search">
+			<input type="text" class="search-input" name="searchParam" placeholder="recent" autofocus="true"></div>
+		</div>
+		<div class="search-button">
+			<a class="btn-sm btn-border" ng-click="">Search</a>
+		</div>
+		<div class="add-button">
+			<a class="btn-sm btn-border" ng-click="">Add New</a>
+		</div>
+	</div>
+
+	<div class="all-books-titles"> 
+		<div class="thumbnail-column">
+		</div>
+		<div class="title-column">Title
+		</div>
+		<div class="thumbnail-column">Keyword
+		</div>
+		<div class="rating-column">Rating
+		</div>
+	</div>
+	
+	<div class="all-books" ng-click="showBook(book.name)" ng-repeat="book in books">
+		<div class="thumbnail-column">
+			<img ng-src="book.thumbnail" class="thumbnail"></div>
+		<div class="title-column">
+			<div class="name">{{book.name}}</div>
+			<div class="author">{{book.author}}</div>
+		</div>
+		<div class="keyword-column">
+			<div>{{book.keywords[0]}</div>
+		</div>
+		<div class="rating-column">
+			<div>{{book.rating}</div>
+		</div>
+	</div>
+
+</section>

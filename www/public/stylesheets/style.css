@@ -1,0 +1,527 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'helvetica neue', 'helvetica', 'arial', 'sans-serif';
+  font-weight: normal;
+  font-weight: 300; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white; }
+
+#wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fcf1d4; }
+
+header {
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  background-color: #401e1d; }
+  header nav {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 18px; }
+    header nav a {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding: 0.5rem 0;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 11px; }
+      header nav a:link, header nav a:visited {
+        color: white;
+        background-color: #401e1d; }
+      header nav a:active, header nav a:hover, header nav a.active {
+        color: #b8870c; }
+
+#main {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+  #main > div > div, #main > div > section {
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+
+.thumbnail {
+  height: 82px;
+  width: 54px; }
+
+.btn, .btn-sm, .btn-med, .btn-lrg {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  text-decoration: none; }
+
+.btn-sm {
+  font-size: 14px;
+  padding: 5px 10px; }
+
+.btn-med {
+  font-size: 18px;
+  padding: 7px 80px; }
+
+.btn-lrg {
+  font-size: 24px;
+  padding: 9px 120px; }
+
+.btn-border {
+  background-color: white;
+  border-style: solid;
+  border-color: #b8870c;
+  border-width: 1px;
+  color: #b8870c; }
+  .btn-border:disabled {
+    background-color: #808080; }
+
+.btn-fill {
+  background-color: #401e1d;
+  color: white; }
+  .btn-fill:disabled {
+    opacity: 0.5;
+    background-color: #293434; }
+
+#login-page {
+  height: 100%;
+  text-align: center;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  #login-page nav {
+    background: #fcf1d4;
+    color: #401e1d;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 black;
+    font-size: 21pt; }
+  #login-page .login {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px 0 black; }
+  #login-page .error {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #be4950; }
+  #login-page .login-input {
+    font-size: 21px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 2px;
+    width: 90%;
+    margin: 5px;
+    box-sizing: border-box;
+    outline: none; }
+
+section.chat {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  section.chat .person-header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 76px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px; }
+    section.chat .person-header .thumbnailCol {
+      -webkit-flex: 0 0 48px;
+      flex: 0 0 48px; }
+    section.chat .person-header .thumbnail {
+      height: 48px;
+      width: 48px;
+      border-radius: 24px; }
+    section.chat .person-header .detailsCol {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding-left: 10px;
+      padding-right: 5px; }
+    section.chat .person-header .name {
+      font-size: 21px; }
+    section.chat .person-header .controlsCol {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .person-header .controlsCol img {
+        width: 25px; }
+  section.chat .messages {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    padding: 5px;
+    overflow-y: auto; }
+    section.chat .messages .item {
+      margin-bottom: 10px; }
+    section.chat .messages .message {
+      text-align: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      padding: 8px;
+      background-color: #fcf1d4;
+      line-height: 1.2;
+      margin: 0 40px 0 0; }
+      section.chat .messages .message.active {
+        margin: 0 0 0 40px;
+        color: white; }
+      section.chat .messages .message:last-child {
+        margin-bottom: 0; }
+    section.chat .messages .invitation {
+      padding: 0.5rem 1rem;
+      color: #b8870c; }
+  section.chat .entry {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    padding: 5px; }
+    section.chat .entry > form {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-align-content: stretch;
+      align-content: stretch; }
+    section.chat .entry .cal {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .entry .cal button {
+        height: 30px; }
+      section.chat .entry .cal img {
+        width: 18px; }
+    section.chat .entry .form-control {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding: 0 5px; }
+      section.chat .entry .form-control .input {
+        height: 30px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: height 250ms 50ms ease;
+        transition: height 250ms 50ms ease;
+        resize: none;
+        margin: 0;
+        padding: 0.15rem 0.5rem;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 100; }
+        section.chat .entry .form-control .input:focus {
+          height: 60px; }
+        section.chat .entry .form-control .input:focus {
+          outline: 0; }
+    section.chat .entry .send {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+  section.chat .calChooser {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.39);
+    background: white;
+    padding: 5px; }
+    section.chat .calChooser .calendar {
+      height: 100px; }
+    section.chat .calChooser .buttonRow {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center; }
+      section.chat .calChooser .buttonRow > div {
+        -webkit-flex: 1 0 auto;
+        flex: 1 0 auto; }
+      section.chat .calChooser .buttonRow .selectedTime {
+        font-size: 16px;
+        font-weight: 400; }
+      section.chat .calChooser .buttonRow .btns {
+        text-align: right; }
+
+section.chat {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  section.chat .person-header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 76px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px; }
+    section.chat .person-header .thumbnailCol {
+      -webkit-flex: 0 0 48px;
+      flex: 0 0 48px; }
+    section.chat .person-header .thumbnail {
+      height: 48px;
+      width: 48px;
+      border-radius: 24px; }
+    section.chat .person-header .detailsCol {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding-left: 10px;
+      padding-right: 5px; }
+    section.chat .person-header .name {
+      font-size: 21px; }
+    section.chat .person-header .controlsCol {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .person-header .controlsCol img {
+        width: 25px; }
+  section.chat .messages {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    padding: 5px;
+    overflow-y: auto; }
+    section.chat .messages .item {
+      margin-bottom: 10px; }
+    section.chat .messages .message {
+      text-align: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      padding: 8px;
+      background-color: #fcf1d4;
+      line-height: 1.2;
+      margin: 0 40px 0 0; }
+      section.chat .messages .message.active {
+        margin: 0 0 0 40px;
+        color: white; }
+      section.chat .messages .message:last-child {
+        margin-bottom: 0; }
+    section.chat .messages .invitation {
+      padding: 0.5rem 1rem;
+      color: #b8870c; }
+  section.chat .entry {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    padding: 5px; }
+    section.chat .entry > form {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-align-content: stretch;
+      align-content: stretch; }
+    section.chat .entry .cal {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .entry .cal button {
+        height: 30px; }
+      section.chat .entry .cal img {
+        width: 18px; }
+    section.chat .entry .form-control {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding: 0 5px; }
+      section.chat .entry .form-control .input {
+        height: 30px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: height 250ms 50ms ease;
+        transition: height 250ms 50ms ease;
+        resize: none;
+        margin: 0;
+        padding: 0.15rem 0.5rem;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 100; }
+        section.chat .entry .form-control .input:focus {
+          height: 60px; }
+        section.chat .entry .form-control .input:focus {
+          outline: 0; }
+    section.chat .entry .send {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+  section.chat .calChooser {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.39);
+    background: white;
+    padding: 5px; }
+    section.chat .calChooser .calendar {
+      height: 100px; }
+    section.chat .calChooser .buttonRow {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center; }
+      section.chat .calChooser .buttonRow > div {
+        -webkit-flex: 1 0 auto;
+        flex: 1 0 auto; }
+      section.chat .calChooser .buttonRow .selectedTime {
+        font-size: 16px;
+        font-weight: 400; }
+      section.chat .calChooser .buttonRow .btns {
+        text-align: right; }
+
+section.chat {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+  section.chat .person-header {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 76px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px; }
+    section.chat .person-header .thumbnailCol {
+      -webkit-flex: 0 0 48px;
+      flex: 0 0 48px; }
+    section.chat .person-header .thumbnail {
+      height: 48px;
+      width: 48px;
+      border-radius: 24px; }
+    section.chat .person-header .detailsCol {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding-left: 10px;
+      padding-right: 5px; }
+    section.chat .person-header .name {
+      font-size: 21px; }
+    section.chat .person-header .controlsCol {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .person-header .controlsCol img {
+        width: 25px; }
+  section.chat .messages {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    padding: 5px;
+    overflow-y: auto; }
+    section.chat .messages .item {
+      margin-bottom: 10px; }
+    section.chat .messages .message {
+      text-align: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      border-radius: 5px;
+      margin-bottom: 1em;
+      padding: 8px;
+      background-color: #fcf1d4;
+      line-height: 1.2;
+      margin: 0 40px 0 0; }
+      section.chat .messages .message.active {
+        margin: 0 0 0 40px;
+        color: white; }
+      section.chat .messages .message:last-child {
+        margin-bottom: 0; }
+    section.chat .messages .invitation {
+      padding: 0.5rem 1rem;
+      color: #b8870c; }
+  section.chat .entry {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    padding: 5px; }
+    section.chat .entry > form {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: flex-start;
+      align-items: flex-start;
+      -webkit-align-content: stretch;
+      align-content: stretch; }
+    section.chat .entry .cal {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+      section.chat .entry .cal button {
+        height: 30px; }
+      section.chat .entry .cal img {
+        width: 18px; }
+    section.chat .entry .form-control {
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
+      padding: 0 5px; }
+      section.chat .entry .form-control .input {
+        height: 30px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: height 250ms 50ms ease;
+        transition: height 250ms 50ms ease;
+        resize: none;
+        margin: 0;
+        padding: 0.15rem 0.5rem;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        font-size: 16px;
+        font-weight: 100; }
+        section.chat .entry .form-control .input:focus {
+          height: 60px; }
+        section.chat .entry .form-control .input:focus {
+          outline: 0; }
+    section.chat .entry .send {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+  section.chat .calChooser {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.39);
+    background: white;
+    padding: 5px; }
+    section.chat .calChooser .calendar {
+      height: 100px; }
+    section.chat .calChooser .buttonRow {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center; }
+      section.chat .calChooser .buttonRow > div {
+        -webkit-flex: 1 0 auto;
+        flex: 1 0 auto; }
+      section.chat .calChooser .buttonRow .selectedTime {
+        font-size: 16px;
+        font-weight: 400; }
+      section.chat .calChooser .buttonRow .btns {
+        text-align: right; }
+

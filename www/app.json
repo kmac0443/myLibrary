@@ -1,0 +1,6 @@
+{
+	"name": "My Library",
+	"description": "Library app",
+	"repository": "https://github.com/kmac0443/myLibrary.git",
+	"keywords": ["node","express"]
+}

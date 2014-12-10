@@ -1,0 +1,5 @@
+{
+	"invite"   : false, // if a regular message, only includes text
+	"from"     : true,  // true if the user sent the message 
+	"text"     : "Where were we meeting again?  You said in class, but I can't remember."
+}

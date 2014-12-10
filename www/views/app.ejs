@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title><% title %></title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<script type="text/javascript" src="angular.min.js" ></script>
+		<script type="text/javascript" src="scripts/setup.js" ></script>
+		<script type="text/javascript" src="scripts/PageController.js" ></script>
+
+	</head>
+	<body ng-app="lib">
+		<div id="wrapper" ng-controller="PageController">
+			<header>
+				<div class="titlebar">My Library</div>
+				<nav>
+					<a ng-click="showView('home')" ng-class="tab.home">HOME</a>
+					<a ng-click="showView('reading')" ng-class="tab.reading">READING LIST</a>
+					<a ng-click="showView('wish')" ng-class="tab.wish">WISH LIST</a>
+				</nav>
+			</header>
+
+			<div id="main">
+
+				<div ng-show="show.home">
+					<% include partials/home %>
+				</div>
+				<div ng-show="show.reading">
+					<% include partials/reading %>
+				</div>
+				<div ng-show="show.wish">
+					<% include partials/wish %>
+				</div>
+				<div ng-show="show.book">
+					<% include partials/book %>
+				</div>
+				<!-- PAGES END HERE -->
+
+			</div><!-- end #main -->
+		</div><!-- end #wrapper -->
+	</body>
+</html>

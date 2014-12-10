@@ -1,0 +1,46 @@
+// This file holds styles for buttons, toggles,
+// and other reusable UI elements.
+
+.btn
+	-moz-border-radius: $button-radius
+	-webkit-border-radius: $button-radius
+	border-radius: $button-radius
+	display:inline-block
+	cursor: pointer
+	font-family: $font-button
+	text-decoration: none
+
+// BUTTON SIZES
+.btn-sm
+	@extend .btn
+	font-size: 14px
+	padding: 5px 10px
+
+.btn-med
+	@extend .btn
+	font-size: 18px
+	padding: 7px 80px
+
+.btn-lrg
+	@extend .btn
+	font-size: 24px
+	padding: 9px 120px
+
+// BUTTON COLORS SCHEMES
+.btn-border
+	background-color: white
+	border-style: solid
+	border-color: $color-accent
+	border-width: 1px
+	color: $color-accent
+
+	&:disabled
+		background-color: darken(white, 50%)
+
+.btn-fill
+	background-color: $color-primary
+	color: white
+
+	&:disabled
+		opacity: 0.5
+		background-color: desaturate($color-primary, 50%)

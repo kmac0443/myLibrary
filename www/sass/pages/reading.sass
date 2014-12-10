@@ -1,0 +1,122 @@
+section.chat
+	+display-flex()
+	+flex-direction(column)
+
+	.person-header
+		+box-sizing(border-box)
+		height: 76px
+		+display-flex()
+		+align-items(center)
+		padding: 10px
+		$thumbSize: 48px
+
+		.thumbnailCol
+			+flex(0 0 $thumbSize)
+
+		.thumbnail
+			height: $thumbSize
+			width: $thumbSize
+			border-radius: 24px
+
+		.detailsCol
+			+flex-grow(1)
+			padding-left: 10px
+			padding-right: 5px
+
+		.name
+			font-size: 21px
+
+		.controlsCol
+			+flex(0 0 auto)
+			img
+				width: 25px
+
+	.messages
+		+flex-grow(1)
+		padding: 5px
+		overflow-y: auto
+
+		.item
+			margin-bottom: 10px
+
+		.message
+			text-align: left
+			+box-sizing(border-box)
+			word-wrap: break-word
+			border-radius: 5px
+			margin-bottom: 1em
+			padding: 8px
+			background-color: $color-primary-lighter
+			line-height: 1.2
+			$adj: 40px
+			margin: 0 $adj 0 0
+			&.active
+				margin: 0 0 0 $adj
+				color:white
+
+			&:last-child
+				margin-bottom: 0
+
+		.invitation
+			padding: 0.5rem 1rem
+			color:$color-accent
+
+	.entry
+		$entryRowHeight: 30px
+		+flex-grow(0)
+		+flex-shrink(0)
+		padding: 5px
+
+		>form
+			+display-flex()
+			+align-items(flex-start)
+			+align-content(stretch)
+
+		.cal
+			+flex(0 0 auto)
+			button
+				height: $entryRowHeight
+			img
+				width: 18px
+
+		.form-control
+			+flex-grow(1)
+			padding: 0 5px
+			.input
+				height: $entryRowHeight
+				width: 100%
+				+box-sizing(border-box)
+				+transition(height 250ms 50ms ease)
+				&:focus
+					height: $entryRowHeight*2
+				resize: none
+				margin: 0
+				padding: 0.15rem 0.5rem
+				border: 1px solid darken(white,20%)
+				border-radius: 2px
+				font-size: 16px
+				font-weight: 100
+
+				&:focus
+					outline: 0
+
+		.send
+			+flex(0 0 auto)
+	.calChooser
+		+flex-shrink(0)
+		box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.39)
+		background: white
+		padding: 5px
+		.calendar
+			height: 100px
+		.buttonRow
+			+display-flex()
+			+align-items(center)
+			>div
+				+flex( 1 0 auto)
+			.selectedTime
+				font-size: 16px
+				font-weight: 400
+			.btns
+				text-align: right
+
